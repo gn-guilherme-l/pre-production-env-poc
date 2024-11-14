@@ -1,0 +1,16 @@
+{
+  "name": "pre-production-env-poc",
+  "module": "index.js",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "start:production": "env-cmd -r .env-cmdrc.cjs -e ${ENVIRONMENT:-staging} ./index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "env-cmd": "git+https://github.com/toddbluhm/env-cmd.git#8f35b71651f6a78710308ff38ab30896ea72ee8b"
+  }
+}
